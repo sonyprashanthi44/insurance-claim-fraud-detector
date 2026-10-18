@@ -5,8 +5,9 @@ AI-powered fraud scoring with **Low / Medium / High** risk bands and **SHAP** ex
 Screening aid for vehicle insurance claims (SIU / adjuster triage). Not an automated decision-maker.
 
 **Live demos**
-- Frontend (Vercel): _add after deploy_
-- API (Hugging Face Spaces): _add after deploy_
+- Frontend (Vercel): deploy rontend/ with VITE_API_URL set to the API URL below
+- API (live): https://insurance-claim-fraud-detector-production.up.railway.app
+- Note: Hugging Face free Docker Spaces now need HF Pro; Dockerfile remains HF-compatible
 
 ## Why this project
 
