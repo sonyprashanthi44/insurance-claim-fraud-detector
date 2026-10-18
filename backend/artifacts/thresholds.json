@@ -1,0 +1,17 @@
+{
+  "high": 0.849655,
+  "medium": 0.111779,
+  "rules": {
+    "high": "probability >= high threshold (precision-oriented)",
+    "medium": "probability >= medium threshold (~90% recall on validation)",
+    "low": "probability < medium threshold"
+  },
+  "high_operating_point": {
+    "precision": 0.5,
+    "recall": 0.05405405405405406
+  },
+  "medium_operating_point": {
+    "precision": 0.13201581027667983,
+    "recall": 0.9027027027027027
+  }
+}

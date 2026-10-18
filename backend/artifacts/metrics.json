@@ -1,0 +1,68 @@
+{
+  "n_rows": 15420,
+  "n_train": 12336,
+  "n_test": 3084,
+  "positive_rate": 0.05985732814526589,
+  "baseline_pr_auc": 0.05982490272373541,
+  "cv_pr_auc": 0.238451495235354,
+  "test_pr_auc": 0.2328290608558842,
+  "headline_threshold": "medium",
+  "medium_threshold": 0.111779,
+  "high_threshold": 0.849655,
+  "medium_band_metrics": {
+    "recall": 0.9027027027027027,
+    "precision": 0.13201581027667983,
+    "confusion_matrix": {
+      "labels": [
+        "pred_0",
+        "pred_1"
+      ],
+      "matrix": [
+        [
+          1801,
+          1098
+        ],
+        [
+          18,
+          167
+        ]
+      ],
+      "tn": 1801,
+      "fp": 1098,
+      "fn": 18,
+      "tp": 167
+    }
+  },
+  "high_band_metrics": {
+    "recall": 0.05405405405405406,
+    "precision": 0.5,
+    "confusion_matrix": {
+      "matrix": [
+        [
+          2889,
+          10
+        ],
+        [
+          175,
+          10
+        ]
+      ],
+      "tn": 2889,
+      "fp": 10,
+      "fn": 175,
+      "tp": 10
+    }
+  },
+  "feature_notes": {
+    "dropped": {
+      "PolicyNumber": "Unique ID \u2014 non-predictive and would leak identity.",
+      "RepNumber": "Adjuster ID \u2014 high cardinality process artifact, not claim content.",
+      "AgeOfPolicyHolder": "Binned duplicate of Age; kept numeric Age instead."
+    },
+    "kept": {
+      "Age": "Numeric driver age; zeros treated as missing.",
+      "Year": "Claim year kept as ordered categorical context (not an ID)."
+    }
+  },
+  "why_not_accuracy": "Fraud is ~6% of claims. A model that always predicts non-fraud is ~94% accurate while catching zero fraud. Precision, recall, and PR-AUC measure the rare-class trade-off that accuracy hides."
+}
